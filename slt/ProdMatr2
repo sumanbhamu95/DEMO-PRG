@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class ProdMatr2 {
+
+	//matrix multiplication(the col size of 1st matrix and row size of 2nd matrix must b same)
+	public static void main(String[] args) {	
+		
+		int a[][]=new int[3][3];
+		int b[][]=new int[3][3];
+		int c[][]=new int[3][3];
+		
+		System.out.println("enter a matrix values(3*3)");
+
+		Scanner sc = new Scanner(System.in);
+		for(int i=0;i<3;i++){    //accepting values from user
+			for(int j=0;j<3;j++){
+				a[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("enter b matrix values(3*3)");
+		
+		for(int i=0;i<3;i++){    //accepting values from user
+			for(int j=0;j<3;j++){
+				b[i][j]=sc.nextInt();
+			}
+		}
+		
+       System.out.println("product of (3*3) matrix");
+		int sum=0;
+		for(int i=0;i<3;i++){    // row size of 1st matrix
+			for(int j=0;j<3;j++){  // row size of 2nd matrix
+				for(int k=0;k<3;k++){  // col size of 2nd matrix
+					sum=sum+a[i][k]*b[k][j];
+				}
+				c[i][j]=sum;
+				sum=0;	
+			}
+		}
+		
+		for(int i=0;i<3;i++){    //multiplication of 2 matrix
+			for(int j=0;j<3;j++){
+				System.out.print(c[i][j]+"   ");
+			}System.out.println();
+		}
+		
+		
+
+
+	}
+
+}
