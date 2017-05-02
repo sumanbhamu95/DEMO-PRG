@@ -1,2 +1,2 @@
 # DEMO-PRG
-###In this repository there are few sample prgrams on java
+## In this repository there are few sample prgrams on java
